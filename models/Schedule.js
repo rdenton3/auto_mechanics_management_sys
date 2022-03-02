@@ -12,7 +12,7 @@ Schedule.init(
       autoIncrement: true
     },
     Date: {
-      type: DataTypes.STRING,
+      type: DataTypes.DATE,
       allowNull: false,
       validate: {
         len: [1]

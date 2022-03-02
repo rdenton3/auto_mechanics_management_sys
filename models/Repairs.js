@@ -24,6 +24,9 @@ Repairs.init(
         key: "id",
       },
     },
+      status_id: {
+        type: DataTypes.BOOLEAN,
+    },
   },
   {
     sequelize,
