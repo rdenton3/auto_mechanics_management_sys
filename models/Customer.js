@@ -20,7 +20,7 @@ Customer.init(
     status_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "status",
+        model: "repairs_services",
         key: "id",
       },
     },
