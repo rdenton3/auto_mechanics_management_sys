@@ -1,9 +1,10 @@
+
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Comment extends Model {}
+class Cars extends Model {}
 
-Comment.init(
+Cars.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,13 +12,31 @@ Comment.init(
       primaryKey: true,
       autoIncrement: true
     },
-    comment_text: {
-      type: DataTypes.STRING,
+    Make: {
+      type: DataTypes.DATE,
       allowNull: false,
       validate: {
         len: [1]
       }
     },
+    Make: {
+        type: DataTypes.DATE,
+        allowNull: false,
+        validate: {
+          len: [1]
+        }
+      },
+      VIN: {
+        type: DataTypes.DATE,
+        allowNull: false,
+        validate: {
+          len: [1]
+        }
+      },
+
+
+
+      ///Year and Mileage
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -25,10 +44,10 @@ Comment.init(
         key: 'id'
       }
     },
-    post_id: {
+    status_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'post',
+        model: 'Cars',
         key: 'id'
       }
     }
@@ -37,8 +56,8 @@ Comment.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'comment'
+    modelName: 'Cars'
   }
 );
 
-module.exports = Comment;
+module.exports = Cars;

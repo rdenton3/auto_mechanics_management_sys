@@ -1,14 +1,22 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Vote extends Model {}
+class Schedule extends Model {}
 
-Vote.init(
+Schedule.init(
   {
     id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       primaryKey: true,
       autoIncrement: true
+    },
+    Date: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -17,21 +25,20 @@ Vote.init(
         key: 'id'
       }
     },
-    post_id: {
+    customer_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'post',
+        model: 'customer',
         key: 'id'
       }
     }
   },
   {
     sequelize,
-    timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'vote'
+    modelName: 'schedule'
   }
 );
 
-module.exports = Vote;
+module.exports = Schedule;
