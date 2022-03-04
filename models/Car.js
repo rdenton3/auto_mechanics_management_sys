@@ -11,25 +11,25 @@ Car.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    Make: {
+    make: {
       type: DataTypes.STRING,
       //allowNull: false,
  
     },
-    Model: {
+    model: {
       type: DataTypes.STRING,
       //allowNull: false,
 
     },
-    VIN: {
+    vin: {
       type: DataTypes.STRING,
 
     },
-    Year: {
+    year: {
       type: DataTypes.STRING,
 
     },
-    Mileage: {
+    mileage: {
       type: DataTypes.INTEGER,
 
     },
@@ -49,7 +49,7 @@ Car.init(
     sequelize,
     freezeTableName: true,
     //underscored: true,
-    modelName: "Car",
+    modelName: "car",
   }
 );
 

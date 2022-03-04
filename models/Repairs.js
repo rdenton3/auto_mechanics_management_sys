@@ -30,7 +30,7 @@ Repairs.init(
     car_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "Car",
+        model: "car",
         key: "id",
       },
     },
