@@ -1,5 +1,5 @@
 const seedUsers = require('./user-seeds');
-const seedCustomer = require('./customer-seeds');
+const seedCar = require('./car-seeds');
 const seedRepairs = require('./repairs-seeds');
 const seedSchedule = require('./schedule-seeds');
 
@@ -11,7 +11,7 @@ const seedAll = async () => {
   await seedUsers();
   console.log('--------------');
 
-  await seedCustomer();
+  await seedCar();
   console.log('--------------');
 
   await seedRepairs();
