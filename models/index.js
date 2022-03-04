@@ -3,6 +3,7 @@ const Customer = require('./Customer');
 const User = require('./User');
 const Repairs = require('./Repairs');
 const Schedule = require('./Schedule');
+const Cars = require('./Cars');
 
 // create associations
 User.hasMany(Cars, {
@@ -40,4 +41,4 @@ User.hasMany(Repairs, {
 
 
 
-module.exports = { User, Customer, Repairs, Schedule };
+module.exports = { User, Customer, Repairs, Schedule, Cars };

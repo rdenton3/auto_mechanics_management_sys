@@ -39,7 +39,7 @@ async function signupFormHandler(event) {
       }),
       headers: { 'Content-Type': 'application/json' }
     });
-    // replace file name 
+    // replace file name to be the user home page
     if (response.ok) {
       document.location.replace('/dashboard/');
     } else {

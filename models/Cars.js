@@ -19,7 +19,7 @@ Cars.init(
         len: [1]
       }
     },
-    Make: {
+    Model: {
         type: DataTypes.DATE,
         allowNull: false,
         validate: {
@@ -33,10 +33,7 @@ Cars.init(
           len: [1]
         }
       },
-
-
-
-      ///Year and Mileage
+    ///Year and Mileage
     user_id: {
       type: DataTypes.INTEGER,
       references: {
