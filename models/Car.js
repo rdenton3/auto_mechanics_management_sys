@@ -1,6 +1,5 @@
-
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
 class Car extends Model {}
 
@@ -10,66 +9,47 @@ Car.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true
+      autoIncrement: true,
     },
     Make: {
       type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
+      //allowNull: false,
+ 
     },
     Model: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [1]
-        }
-      },
-      VIN: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [1]
-        }
-      },
-      Year: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [1]
-        }
-      },
-      Mileage: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        validate: {
-          len: [1]
-        }
-      },
-      
+      type: DataTypes.STRING,
+      //allowNull: false,
+
+    },
+    VIN: {
+      type: DataTypes.STRING,
+
+    },
+    Year: {
+      type: DataTypes.STRING,
+
+    },
+    Mileage: {
+      type: DataTypes.INTEGER,
+
+    },
+
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
-        key: 'id'
-      }
+        model: "user",
+        key: "id",
+      },
     },
-    // status_id: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: 'repairs',
-    //     key: 'id'
-    //   }
-
-      
-    // }
+    Complete_id: {
+      type: DataTypes.BOOLEAN,
+    },
   },
   {
     sequelize,
     freezeTableName: true,
-    underscored: true,
-    modelName: 'Car'
+    //underscored: true,
+    modelName: "Car",
   }
 );
 

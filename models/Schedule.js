@@ -13,10 +13,7 @@ Schedule.init(
     },
     Date: {
       type: DataTypes.DATE,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
+      //allowNull: false,
     },
     user_id: {
       type: DataTypes.INTEGER,

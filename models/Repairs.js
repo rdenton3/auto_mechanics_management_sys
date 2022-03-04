@@ -27,13 +27,13 @@ Repairs.init(
     status_id: {
       type: DataTypes.BOOLEAN,
     },
-    // car_id: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: "car",
-    //     key: "id",
-    //   },
-    // },
+    car_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "Car",
+        key: "id",
+      },
+    },
   },
   {
     sequelize,
