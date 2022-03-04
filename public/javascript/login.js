@@ -13,7 +13,7 @@ async function loginFormHandler(event) {
       }),
       headers: { 'Content-Type': 'application/json' }
     });
-
+    // replace file name here with handlebars that is created
     if (response.ok) {
       document.location.replace('/dashboard/');
     } else {
@@ -39,7 +39,7 @@ async function signupFormHandler(event) {
       }),
       headers: { 'Content-Type': 'application/json' }
     });
-
+    // replace file name 
     if (response.ok) {
       document.location.replace('/dashboard/');
     } else {

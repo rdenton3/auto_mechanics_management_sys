@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "jest",
+    "start": "node server.js",
     "seeds": "node seeds/index.js"
   },
   "author": "",
