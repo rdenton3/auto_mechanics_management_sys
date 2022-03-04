@@ -1,10 +1,9 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
-// create our Post model
-class Repairs extends Model {}
 
-// create fields/columns for Post model
-Repairs.init(
+class Car extends Model {}
+
+Car.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -12,9 +11,27 @@ Repairs.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    item: {
+    make: {
       type: DataTypes.STRING,
-      allowNull: false,
+      //allowNull: false,
+ 
+    },
+    model: {
+      type: DataTypes.STRING,
+      //allowNull: false,
+
+    },
+    vin: {
+      type: DataTypes.STRING,
+
+    },
+    year: {
+      type: DataTypes.STRING,
+
+    },
+    mileage: {
+      type: DataTypes.INTEGER,
+
     },
 
     user_id: {
@@ -24,23 +41,16 @@ Repairs.init(
         key: "id",
       },
     },
-    status_id: {
+    Complete_id: {
       type: DataTypes.BOOLEAN,
-    },
-    car_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "car",
-        key: "id",
-      },
     },
   },
   {
     sequelize,
     freezeTableName: true,
-    underscored: true,
-    modelName: "repairs",
+    //underscored: true,
+    modelName: "car",
   }
 );
 
-module.exports = Repairs;
+module.exports = Car;

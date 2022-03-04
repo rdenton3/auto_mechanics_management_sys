@@ -1,23 +1,34 @@
 // import all models
-const Customer = require('./Customer');
-const User = require('./User');
-const Repairs = require('./Repairs');
-const Schedule = require('./Schedule');
-const Cars = require('./Cars');
+const User = require("./User");
+const Repairs = require("./Repairs");
+const Schedule = require("./Schedule");
+const Car = require("./Car");
 
 // create associations
-User.hasMany(Cars, {
-  foreignKey: 'user_id'
+User.hasMany(Car, {
+  foreignKey: "user_id",
 });
 
-Cars.hasMany(Repairs, {
-  foreignKey: 'car_id'
+User.hasMany(Schedule, {
+  foreignKey: "car_id",
 });
 
+User.hasMany(Repairs, {
+  foreignKey: "user_id",
+});
+
+Car.belongsTo(User, {
+  foreignKey: "user_id",
+  onDelete: "SET NULL",
+});
+
+Car.hasMany(Repairs, {
+  foreignKey: "car_id",
+});
 
 Repairs.belongsTo(Car, {
-  foreignKey: 'user_id',
-  onDelete: 'SET NULL'
+  foreignKey: "user_id",
+  onDelete: "SET NULL",
 });
 
 // User.belongsToMany(Schedule, {
@@ -29,16 +40,7 @@ Repairs.belongsTo(Car, {
 // });
 
 
-Cars.belongsTo(User, {
-  foreignKey: 'user_id',
-  onDelete: 'SET NULL'
-});
-
-
-User.hasMany(Repairs, {
-  foreignKey: 'user_id'
-});
 
 
 
-module.exports = { User, Customer, Repairs, Schedule, Cars };
+module.exports = { User, Car, Repairs, Schedule };
