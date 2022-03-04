@@ -24,15 +24,22 @@ Repairs.init(
         key: "id",
       },
     },
-      status_id: {
-        type: DataTypes.BOOLEAN,
+    status_id: {
+      type: DataTypes.BOOLEAN,
     },
+    // car_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: "car",
+    //     key: "id",
+    //   },
+    // },
   },
   {
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: "repairs_services",
+    modelName: "repairs",
   }
 );
 
