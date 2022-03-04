@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Cars, Repairs, Schedule } = require('../../models');
+const { User, Car, Repairs, Schedule } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // the status page should first show user all the cars they have registered 
@@ -16,12 +16,12 @@ router.get('/', withAuth, (req, res) => {
     //   include the Cars model to show all active cars registered to that user
       include: [
         {
-          model: Cars,
-          attributes: ['id','Make','Model','VIN']
+          model: Car,
+          attributes: ['id','make','model','vin','year']
         }
       ]
     })
-    // then pass posts into the template
+    // then pass cars into the template
       .then(carData => {
         //   if user doesnt have any cars, let them know
         if (!carData) {
@@ -32,7 +32,7 @@ router.get('/', withAuth, (req, res) => {
         // serialize data before passing to template
         const cars = carData.map(car => car.get({ plain: true }));
         // render the options status page ****** NEED TO PUDATE FILE NAME
-        res.render('dashboard', { posts, loggedIn: true });
+        res.render('status', { cars, loggedIn: true });
       })
       .catch(err => {
         console.log(err);
@@ -42,34 +42,26 @@ router.get('/', withAuth, (req, res) => {
 
 // once the user selects a specific car they would like to view the status for
 // get the car id from the req.params
-  router.get('/:id', withAuth, (req, res) => {
+  router.get('/cars/:id', withAuth, (req, res) => {
     // find the car that matches with the corresponding id
-    Cars.findOne({
+    Car.findOne({
       where: {
-        // use the ID from the session
+        // grab car id from the params
         id: req.params.id
       },
-      attributes: ['id', 'Make', 'Model', 'VIN'],
+      attributes: ['id','make','model','vin','year'],
     //   include the Repairs model to show all active issues for that car
       include: [
         {
           model: Repairs,
-          attributes: ['id','Make','Model','VIN']
+          attributes: ['id','item','status_id']
         }
       ]
     })
     // then pass posts into the template
       .then(carData => {
-        //   if user doesnt have any cars, let them know
-        if (!carData) {
-            // error message might be different from actually letting them know they dont have cars registered
-            res.status(404).json({ message: 'You have not yet registered any cars' });
-            return;
-          }
-        // serialize data before passing to template
-        const cars = carData.map(car => car.get({ plain: true }));
-        // render the options status page ****** NEED TO PUDATE FILE NAME
-        res.render('dashboard', { posts, loggedIn: true });
+        // feed car data back to page
+        res.json(carData);
       })
       .catch(err => {
         console.log(err);
