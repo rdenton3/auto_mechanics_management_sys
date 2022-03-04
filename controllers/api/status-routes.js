@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Car, Repairs, Schedule } = require('../../models');
+const { User, Car, Repairs} = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // the status page should first show user all the cars they have registered 
@@ -68,3 +68,5 @@ router.get('/', withAuth, (req, res) => {
         res.status(500).json(err);
       });
   });
+
+  module.exports = router;

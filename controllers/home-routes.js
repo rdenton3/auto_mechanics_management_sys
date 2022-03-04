@@ -4,7 +4,7 @@ const withAuth = require('../utils/auth');
 
 // the home page is generic and will be shown to everyone
 // need to either login or signup
-router.get('/', withAuth, (req, res) => {
+router.get('/', (req, res) => {
       res.render('home');
     });
 
