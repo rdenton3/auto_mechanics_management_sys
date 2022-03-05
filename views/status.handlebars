@@ -1,11 +1,12 @@
 <h1>Status page</h1>
 
 {{#if cars.length}}
+{{#unless cars.schedule.complete_id}}
 <section>
-  <h2>Your History of Repairs</h2>
+  <h2>Status of Repairs</h2>
   <ol>
     {{#each cars as |car|}}
-    <p>{{make}}</p>
+    <p>{{car.car.make}}</p>
     <p>{{item}}</p>
     {{!-- <p>{{content}}</p> --}}
     {{!-- <li>
@@ -14,4 +15,5 @@
     {{/each}}
   </ol>
 </section>
+{{/unless}}
 {{/if}}
