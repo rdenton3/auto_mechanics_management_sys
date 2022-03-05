@@ -11,16 +11,16 @@ const withAuth = require('../../utils/auth');
 // allow them to pick one car to view the history of 
 router.get('/', withAuth, (req, res) => {
     // find user that matches with the corresponding id
-    User.findOne({
+    Repairs.findAll({
       where: {
         // use the ID from the session
-        id: req.session.id
+        user_id: req.session.user_id,
       },
     //   include the Cars model to show all active cars registered to that user
       include: [
         {
           model: Car,
-          attributes: ['id','make','model','vin','year']
+          attributes: ['model']
         }
       ]
     })
@@ -33,9 +33,11 @@ router.get('/', withAuth, (req, res) => {
             return;
           }
         // serialize data before passing to template
-        const cars = carData.map(car => car.get({ plain: true }));
+        //const cars = carData.cars.map(car => car.get({ plain: true }));
+        //const cars = carData.cars.map((car) => car.get({ plain: true })); //mb added .cars
         // render the options status page ****** NEED TO PUDATE FILE NAME
-        res.render('history', { cars, loggedIn: true });  //MB - changed to history
+        //res.render('history', { cars, loggedIn: true });  //MB - changed to history
+        res.json(carData);
       })
       .catch(err => {
         console.log(err);

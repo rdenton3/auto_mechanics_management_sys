@@ -2,107 +2,124 @@ const { Repairs } = require('../models');
 
 const repairsdata = [
   {
-    item: 'Oil Change',
+    item: 'Change oil and filter',
     status_id:  1,
     user_id: 10,
     car_id: 15
   },
   {
-    item: 'Morbi non quam nec d',
+    item: 'Check lights, wipers, and washers. Clean air intake vents',
     status_id: 0,
-    user_id: 8
-  },
-  {
-    item: 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue.',
-    status_id: 0,
-    user_id: 1
-  },
-  {
-    item: 'Nunc purus.',
-    status_id: 0,
-    user_id: 4
-  },
-  {
-    item: 'Pellentesque eget nunc.',
-    status_id: 0,
-    user_id: 7
-  },
-  {
-    item: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
-    status_id: 0,
-    user_id: 4
-  },
-  {
-    item: 'In hac habitasse platea dictumst.',
-    status_id: 0,
-    user_id: 1
-  },
-  {
-    item: 'Morbi non quam nec dui luctus rutrum.',
-    status_id: 0,
-    user_id: 1
-  },
-  {
-    item: 'Duis ac nibh.',
-    status_id: 0,
-    user_id: 9
-  },
-  {
-    item: 'Curabitur at ipsum ac tellus semper interdum.',
-    status_id: 0,
-    user_id: 5
-  },
-  {
-    item: 'In hac habitasse platea dictumst.',
-    status_id: 1,
-    user_id: 3
-  },
-  {
-    item: 'Breaks Checked',
-    status_id: 1,
-    user_id: 10,
+    user_id: 8,
     car_id: 15
   },
   {
-    item: 'Donec dapibus.',
+    item: 'Check condition of all fluids',
+    status_id: 0,
+    user_id: 1,
+    car_id: 15
+  },
+  {
+    item: 'Check underside of car, tires, exhaust, steering and suspension',
+    status_id: 0,
+    user_id: 4,
+    car_id: 15
+  },
+  {
+    item: 'Change Transmission',
+    status_id: 0,
+    user_id: 7,
+    car_id: 15
+  },
+  {
+    item: 'Check and adjust tire pressures & inspect condition of tires',
+    status_id: 0,
+    user_id: 4,
+    car_id: 15
+  },
+  {
+    item: 'Check belts and hoses. Record anti-freeze condition and protection',
+    status_id: 0,
+    user_id: 1,
+    car_id: 15
+  },
+  {
+    item: 'Check battery and leads, test and print results',
+    status_id: 0,
+    user_id: 1,
+    car_id: 15
+  },
+  {
+    item: 'Check steering handling & brakes',
+    status_id: 0,
+    user_id: 9,
+    car_id: 15
+  },
+  {
+    item: 'Check A/C and heating system',
+    status_id: 0,
+    user_id: 5,
+    car_id: 15
+  },
+  {
+    item: 'Check engine and transmission performance',
     status_id: 1,
-    user_id: 8
+    user_id: 3,
+    car_id: 15
   },
   {
-    item: 'Nulla tellus.',
-    status_id: 0,
-    user_id: 3
+    item: 'Check battery, starting system and charging system',
+    status_id: 1,
+    user_id: 10,
+    car_id: 15,
+    },
+  {
+    item: 'Scan computer, check history related to check engine light & record codes',
+    status_id: 1,
+    user_id: 8,
+    car_id: 15
   },
   {
-    item: 'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.',
+    item: 'Check cooling system performance & condition of radiator and water pump',
     status_id: 0,
-    user_id: 3
+    user_id: 10,
+    car_id: 32
   },
   {
-    item:
-      'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam.',
+    item: 'Check throttle body, add engine cleaner to gas tank',
     status_id: 0,
-    user_id: 7
+    user_id: 10,
+    car_id: 32,
   },
   {
-    item: 'In hac habitasse platea dictumst.',
+    item:'Replace fuel line injection',
     status_id: 0,
-    user_id: 6
+    user_id: 7,
+    car_id: 15
   },
   {
-    item: 'Etiam justo.',
+    item: 'Clean and service battery connections',
     status_id: 0,
-    user_id: 4
+    user_id: 6,
+    car_id: 15
   },
   {
-    item: 'Nulla ut erat id mauris vulputate elementum.',
+    item: 'Inspect and change cabin filter if needed',
     status_id: 0,
-    user_id: 6
+    user_id: 4,
+    car_id: 15
   },
   {
-    item: 'Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.',
+    item: 'Install fuel filter and spark plugs if needed',
     status_id: 0,
-    user_id: 7
+    user_id: 6,
+    car_id: 15
+  },
+  {
+    item: 'Fix broken light',
+    status_id: 0,
+    user_id: 7,
+    car_id: 15
   }
 ];
 
