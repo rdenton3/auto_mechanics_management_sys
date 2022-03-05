@@ -1,1 +1,17 @@
 <h1>Status page</h1>
+
+{{#if cars.length}}
+<section>
+  <h2>Your History of Repairs</h2>
+  <ol>
+    {{#each cars as |car|}}
+    <p>{{make}}</p>
+    <p>{{item}}</p>
+    {{!-- <p>{{content}}</p> --}}
+    {{!-- <li>
+      <a href="/post/edit/{{post.id}}" class="edit-link">Edit post</a>
+    </li> --}}
+    {{/each}}
+  </ol>
+</section>
+{{/if}}

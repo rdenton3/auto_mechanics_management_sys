@@ -41,9 +41,7 @@ Car.init(
         key: "id",
       },
     },
-    Complete_id: {
-      type: DataTypes.BOOLEAN,
-    },
+
   },
   {
     sequelize,

@@ -7,7 +7,7 @@ const userdata = [
     username: 'mechanic',
     email: 'mechanic@fastnfurious.com',
     password: 'password123',
-    admin: true,
+    admin: false,
   },
 
   {
