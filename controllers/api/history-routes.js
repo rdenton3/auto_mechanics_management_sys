@@ -33,11 +33,11 @@ router.get('/', withAuth, (req, res) => {
             return;
           }
         // serialize data before passing to template
-        //const cars = carData.cars.map(car => car.get({ plain: true }));
-        //const cars = carData.cars.map((car) => car.get({ plain: true })); //mb added .cars
+        // const cars = carData.cars.map(car => car.get({ plain: true }));
+        const cars = carData.cars.map((car) => car.get({ plain: true })); //mb added .cars
         // render the options status page ****** NEED TO PUDATE FILE NAME
-        //res.render('history', { cars, loggedIn: true });  //MB - changed to history
-        res.json(carData);
+        res.render('history', { cars, loggedIn: true });  //MB - changed to history
+        // res.json(carData);
       })
       .catch(err => {
         console.log(err);

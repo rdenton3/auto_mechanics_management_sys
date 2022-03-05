@@ -202,13 +202,13 @@
       Date: "03/02/2022",
       user_id: 10,
       car_id: 15,
-      complete_id: 1,
+      complete_id: 0,
     },
     {
       Date: "03/02/2022",
-      user_id: 8,
-      car_id: 1,
-      complete_id: 1,
+      user_id: 10,
+      car_id: 32,
+      complete_id: 0,
     },
     {
       Date: "03/02/2022",
