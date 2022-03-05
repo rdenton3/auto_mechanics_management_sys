@@ -2,105 +2,124 @@ const { Repairs } = require('../models');
 
 const repairsdata = [
   {
-    item: 'Donec posuere metus vitae ipsum.',
+    item: 'Change oil and filter',
     status_id:  1,
-    user_id: 10
+    user_id: 10,
+    car_id: 15
   },
   {
-    item: 'Morbi non quam nec dui luctus rutrum.',
+    item: 'Check lights, wipers, and washers. Clean air intake vents',
     status_id: 0,
-    user_id: 8
+    user_id: 8,
+    car_id: 15
   },
   {
-    item: 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue.',
+    item: 'Check condition of all fluids',
     status_id: 0,
-    user_id: 1
+    user_id: 1,
+    car_id: 15
   },
   {
-    item: 'Nunc purus.',
+    item: 'Check underside of car, tires, exhaust, steering and suspension',
     status_id: 0,
-    user_id: 4
+    user_id: 4,
+    car_id: 15
   },
   {
-    item: 'Pellentesque eget nunc.',
+    item: 'Change Transmission',
     status_id: 0,
-    user_id: 7
+    user_id: 7,
+    car_id: 15
   },
   {
-    item: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
+    item: 'Check and adjust tire pressures & inspect condition of tires',
     status_id: 0,
-    user_id: 4
+    user_id: 4,
+    car_id: 15
   },
   {
-    item: 'In hac habitasse platea dictumst.',
+    item: 'Check belts and hoses. Record anti-freeze condition and protection',
     status_id: 0,
-    user_id: 1
+    user_id: 1,
+    car_id: 15
   },
   {
-    item: 'Morbi non quam nec dui luctus rutrum.',
+    item: 'Check battery and leads, test and print results',
     status_id: 0,
-    user_id: 1
+    user_id: 1,
+    car_id: 15
   },
   {
-    item: 'Duis ac nibh.',
+    item: 'Check steering handling & brakes',
     status_id: 0,
-    user_id: 9
+    user_id: 9,
+    car_id: 15
   },
   {
-    item: 'Curabitur at ipsum ac tellus semper interdum.',
+    item: 'Check A/C and heating system',
     status_id: 0,
-    user_id: 5
+    user_id: 5,
+    car_id: 15
   },
   {
-    item: 'In hac habitasse platea dictumst.',
+    item: 'Check engine and transmission performance',
     status_id: 1,
-    user_id: 3
+    user_id: 3,
+    car_id: 15
   },
   {
-    item: 'Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.',
+    item: 'Check battery, starting system and charging system',
     status_id: 1,
-    user_id: 10
-  },
+    user_id: 10,
+    car_id: 15,
+    },
   {
-    item: 'Donec dapibus.',
+    item: 'Scan computer, check history related to check engine light & record codes',
     status_id: 1,
-    user_id: 8
+    user_id: 8,
+    car_id: 15
   },
   {
-    item: 'Nulla tellus.',
+    item: 'Check cooling system performance & condition of radiator and water pump',
     status_id: 0,
-    user_id: 3
+    user_id: 10,
+    car_id: 32
   },
   {
-    item: 'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.',
+    item: 'Check throttle body, add engine cleaner to gas tank',
     status_id: 0,
-    user_id: 3
+    user_id: 10,
+    car_id: 32,
   },
   {
-    item:
-      'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam.',
+    item:'Replace fuel line injection',
     status_id: 0,
-    user_id: 7
+    user_id: 7,
+    car_id: 15
   },
   {
-    item: 'In hac habitasse platea dictumst.',
+    item: 'Clean and service battery connections',
     status_id: 0,
-    user_id: 6
+    user_id: 6,
+    car_id: 15
   },
   {
-    item: 'Etiam justo.',
+    item: 'Inspect and change cabin filter if needed',
     status_id: 0,
-    user_id: 4
+    user_id: 4,
+    car_id: 15
   },
   {
-    item: 'Nulla ut erat id mauris vulputate elementum.',
+    item: 'Install fuel filter and spark plugs if needed',
     status_id: 0,
-    user_id: 6
+    user_id: 6,
+    car_id: 15
   },
   {
-    item: 'Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.',
+    item: 'Fix broken light',
     status_id: 0,
-    user_id: 7
+    user_id: 7,
+    car_id: 15
   }
 ];
 
