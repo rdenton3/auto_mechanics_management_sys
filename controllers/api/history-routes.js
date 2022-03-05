@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Car, Repairs } = require('../../models');
+const { User, Car, Repairs, Schedule } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // figure out what we want the histroy to look like? 
@@ -35,7 +35,7 @@ router.get('/', withAuth, (req, res) => {
         // serialize data before passing to template
         const cars = carData.map(car => car.get({ plain: true }));
         // render the options status page ****** NEED TO PUDATE FILE NAME
-        res.render('status', { cars, loggedIn: true });
+        res.render('history', { cars, loggedIn: true });  //MB - changed to history
       })
       .catch(err => {
         console.log(err);
@@ -52,6 +52,7 @@ router.get('/:id', (req, res) => {
       where: {
         id: req.params.id, 
         // is there a way to only pull for status ids that are true aka finished
+        //MB - The schedule Completed_ind = true
         status_id: true
       },
       attributes: ['id','make','model','vin','year'],

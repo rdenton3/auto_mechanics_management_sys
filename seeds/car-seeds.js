@@ -8,7 +8,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 6,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -17,7 +16,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 6,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -26,7 +24,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 3,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -35,7 +32,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 3,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -44,7 +40,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 7,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -53,7 +48,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 1,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -62,7 +56,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 6,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -71,7 +64,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 7,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -80,7 +72,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 6,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -89,7 +80,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 6,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -98,7 +88,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 3,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -107,7 +96,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 5,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -116,7 +104,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 4,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -125,15 +112,13 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 5,
-    complete_id: 0,
   },
   {
     make: "Toyota",
-    model: "Corolla",
+    model: "RAV4",
     vin: "454545454545",
     year: "2020",
-    user_id: 6,
-    complete_id: 0,
+    user_id: 10,
   },
   {
     make: "Toyota",
@@ -142,7 +127,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 8,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -151,7 +135,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 2,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -160,7 +143,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 4,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -169,7 +151,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 5,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -178,7 +159,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 9,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -187,7 +167,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 6,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -196,7 +175,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 4,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -205,7 +183,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 3,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -214,7 +191,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 8,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -223,7 +199,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 1,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -232,7 +207,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 5,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -241,7 +215,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 1,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -250,7 +223,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 4,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -259,7 +231,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 4,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -268,7 +239,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 4,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -277,7 +247,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 7,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -286,7 +255,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 10,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -295,7 +263,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 3,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -304,7 +271,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 5,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -313,7 +279,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 10,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -322,7 +287,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 10,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -331,7 +295,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 10,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -340,7 +303,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 8,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -349,7 +311,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 8,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -358,7 +319,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 9,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -367,7 +327,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 5,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -376,7 +335,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 2,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -385,7 +343,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 4,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -394,7 +351,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 9,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -403,7 +359,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 7,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -412,7 +367,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 4,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -421,7 +375,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 10,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -430,7 +383,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 2,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -439,7 +391,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 10,
-    complete_id: 0,
   },
   {
     make: "Toyota",
@@ -448,7 +399,6 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 10,
-    complete_id: 0,
   },
 ];
 

@@ -29,6 +29,9 @@ Schedule.init(
         key: 'id'
       }
     },
+    complete_id: {
+      type: DataTypes.BOOLEAN,
+    },
  
   },
   {

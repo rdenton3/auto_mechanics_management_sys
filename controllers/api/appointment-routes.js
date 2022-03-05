@@ -18,6 +18,8 @@ router.post('/', withAuth, (req, res) => {
         res.status(500).json(err);
       });
   });
+
+  
 // A second post request will be needed to add the car to the database
 // is it easier to make two separate post requests or combine it all into one?
 router.post('/', (req, res) => {

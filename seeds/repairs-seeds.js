@@ -2,12 +2,13 @@ const { Repairs } = require('../models');
 
 const repairsdata = [
   {
-    item: 'Donec posuere metus vitae ipsum.',
+    item: 'Oil Change',
     status_id:  1,
-    user_id: 10
+    user_id: 10,
+    car_id: 15
   },
   {
-    item: 'Morbi non quam nec dui luctus rutrum.',
+    item: 'Morbi non quam nec d',
     status_id: 0,
     user_id: 8
   },
@@ -57,9 +58,10 @@ const repairsdata = [
     user_id: 3
   },
   {
-    item: 'Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.',
+    item: 'Breaks Checked',
     status_id: 1,
-    user_id: 10
+    user_id: 10,
+    car_id: 15
   },
   {
     item: 'Donec dapibus.',
