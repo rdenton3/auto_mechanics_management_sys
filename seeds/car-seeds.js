@@ -7,7 +7,7 @@ const Cardata = [
     vin: "454545454545",
     year: "2020",
     mileage: 10000,
-    user_id: 6,
+    user_id: 1,
   },
   {
     make: "Toyota",
@@ -15,7 +15,7 @@ const Cardata = [
     vin: "454545454545",
     year: "2020",
     mileage: 10000,
-    user_id: 6,
+    user_id: 2,
   },
   {
     make: "Hyundai",
@@ -31,7 +31,7 @@ const Cardata = [
     vin: "454545454545",
     year: "2020",
     mileage: 10000,
-    user_id: 3,
+    user_id: 4,
   },
   {
     make: "Toyota",
@@ -39,7 +39,7 @@ const Cardata = [
     vin: "454545454545",
     year: "2020",
     mileage: 10000,
-    user_id: 7,
+    user_id: 5,
   },
   {
     make: "Tesla",
@@ -47,7 +47,7 @@ const Cardata = [
     vin: "454545454545",
     year: "2020",
     mileage: 10000,
-    user_id: 1,
+    user_id: 6,
   },
   {
     make: "Lexus",
@@ -55,7 +55,7 @@ const Cardata = [
     vin: "454545454545",
     year: "2020",
     mileage: 10000,
-    user_id: 6,
+    user_id: 7,
   },
   {
     make: "Audi",
@@ -63,7 +63,7 @@ const Cardata = [
     vin: "454545454545",
     year: "2020",
     mileage: 10000,
-    user_id: 7,
+    user_id: 8,
   },
   {
     make: "Acura",
@@ -71,7 +71,7 @@ const Cardata = [
     vin: "454545454545",
     year: "2020",
     mileage: 10000,
-    user_id: 6,
+    user_id: 9,
   },
   {
     make: "Volvo",
@@ -79,7 +79,7 @@ const Cardata = [
     vin: "454545454545",
     year: "2020",
     mileage: 10000,
-    user_id: 6,
+    user_id: 10,
   },
   {
     make: "Jaguar",
@@ -87,9 +87,9 @@ const Cardata = [
     vin: "454545454545",
     year: "2020",
     mileage: 10000,
-    user_id: 3,
+    user_id: 11,
   },
-  {
+ /*  {
     make: "Mercedes Benz",
     model: "R Class",
     vin: "454545454545",
@@ -223,8 +223,8 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 4,
-  },
-  {
+  }, */
+  /* {
     make: "Honda",
     model: "Accord",
     vin: "454545454545",
@@ -399,7 +399,7 @@ const Cardata = [
     year: "2020",
     mileage: 10000,
     user_id: 10,
-  },
+  }, */
 ];
 
 const seedCar = () => Car.bulkCreate(Cardata);
