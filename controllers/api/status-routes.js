@@ -49,50 +49,49 @@ const withAuth = require("../../utils/auth");
 // get the car id from the req.params
 //router.get("/cars/:id", withAuth, (req, res) => {
 router.get("/cars", withAuth, (req, res) => {
-  // find the car that matches with the corresponding id
-  // Car.findOne({
-  console.log(req.session);
-  Repairs.findAll({
-    where: {
-      // grab car id from the params
-      //id: req.params.id,
-      user_id: req.session.user_id
-    },
-    // attributes: ["id", "make", "model", "vin", "year"],
-    //   include the Repairs model to show all active issues for that car
-    include: [
-      {
-        model: Schedule,
-        attributes: ["complete_id"]
-      },
-      {
-        model: Car,
-        attributes: ["make", "model"]
-      },
-    ],
-  })
-// then pass cars into the template
-    .then((carData) => {
-      //   if user doesnt have any cars, let them know
-      if (!carData) {
-        // error message might be different from actually letting them know they dont have cars registered
-        res
-          .status(404)
-          .json({ message: "You have not yet registered any cars" });
-        return;
-      }
-      // serialize data before passing to template
-      const cars = carData.map((car) => car.get({ plain: true })); //mb added .cars
-      console.log(cars)
-    //   // render the options status page ****** NEED TO PUDATE FILE NAME
-      res.render("status", { cars, loggedIn: true });
-      console.log("I ran")
-    //   res.json(carData);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
+    // find the car that matches with the corresponding id
+    // Car.findOne({
+    console.log(req.session);
+    Repairs.findAll({
+            where: {
+                // grab car id from the params
+                //id: req.params.id,
+                user_id: req.session.user_id
+            },
+            // attributes: ["id", "make", "model", "vin", "year"],
+            //   include the Repairs model to show all active issues for that car
+            include: [{
+                    model: Schedule,
+                    attributes: ["complete_id"]
+                },
+                {
+                    model: Car,
+                    attributes: ["make", "model"]
+                },
+            ],
+        })
+        // then pass cars into the template
+        .then((carData) => {
+            //   if user doesnt have any cars, let them know
+            if (!carData) {
+                // error message might be different from actually letting them know they dont have cars registered
+                res
+                    .status(404)
+                    .json({ message: "You have not yet registered any cars" });
+                return;
+            }
+            // serialize data before passing to template
+            const cars = carData.map((car) => car.get({ plain: true })); //mb added .cars
+            console.log(cars)
+                //   // render the options status page ****** NEED TO PUDATE FILE NAME
+            res.render("status", { cars, loggedIn: true });
+            console.log("I ran")
+                //   res.json(carData);
+        })
+        .catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+        });
 });
 
 module.exports = router;

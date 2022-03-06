@@ -1,0 +1,64 @@
+header {
+    background-color: #000000;
+    padding-top: 25px;
+}
+
+.homepage img {
+    object-fit: cover;
+    width: 100vw;
+    height: auto;
+    position: fixed;
+}
+
+.navbar-brand {
+    padding-left: 25px;
+}
+
+li a {
+    color: #ffffff !important;
+}
+
+.btn {
+    border-color: #ffffff !important;
+    margin: 0 14px;
+}
+
+.btn:hover {
+    background-color: #ffffff !important;
+    border: none !important;
+    color: #000000!important;
+}
+
+.dateTime {
+    padding-left: 35px;
+    color: #ffffff;
+}
+
+.date {
+    font-size: 2rem;
+}
+
+.navbar-nav {
+    padding-right: 20%;
+}
+
+.time {
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+footer {
+    bottom: 0;
+    position: fixed;
+    padding: 10px 10px 25px 10px;
+    width: 100%;
+}
+
+.footer-logo {
+    padding-left: 260px;
+}
+
+button.navbar-toggler {
+    border-color: #ffffff !important;
+    background-color: #ffffff;
+}
