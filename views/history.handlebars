@@ -1,6 +1,19 @@
+<h1>Status page</h1>
+
+{{#if cars.length}}
+{{#unless cars.schedule.complete_id}}
 <section>
-  <h2>History Page</h2>
+  <h2>Status of Repairs</h2>
+  <ol>
+    {{#each cars as |car|}}
+    <p>{{car.car.make}}</p>
+    <p>{{item}}</p>
+    {{!-- <p>{{content}}</p> --}}
+    {{!-- <li>
+      <a href="/post/edit/{{post.id}}" class="edit-link">Edit post</a>
+    </li> --}}
+    {{/each}}
+  </ol>
 </section>
-
-
-<script src="/javascript/add-post.js"></script>
+{{/unless}}
+{{/if}}
