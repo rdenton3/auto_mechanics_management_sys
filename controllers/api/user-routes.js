@@ -3,6 +3,7 @@ const { User } = require('../../models');
 
 // sign up page
 router.post('/', (req, res) => {
+  console.log(req.body)
   // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
   User.create({
     username: req.body.username,

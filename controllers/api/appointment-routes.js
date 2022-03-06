@@ -30,6 +30,7 @@ router.post('/', (req, res) => {
       mileage: req.body.mileage,
       year: req.body.mileage,
       user_id: req.session.id
+      
     })
       .then(carData => {
         res.json(carData);
