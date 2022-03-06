@@ -10,7 +10,7 @@ h4 {
 
 header {
     z-index: 9999;
-    position: absolute;
+    /* position: absolute; */
 }
 
 .btn {
