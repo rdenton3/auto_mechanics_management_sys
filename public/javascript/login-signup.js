@@ -102,7 +102,7 @@ const signupFormHandler = async (event) => {
   const username = document.querySelector("#username-signup");
   const email = document.querySelector("#email-signup");
   const password = document.querySelector("#password-signup");
-console.log("SIGNING UP")
+  console.log("SIGNING UP")
   const response = await fetch("/api/users", {
     method: "POST",
     body: JSON.stringify({
@@ -114,13 +114,11 @@ console.log("SIGNING UP")
   });
 
   if (response.ok) {
-    document.location.replace("/status");
+    document.location.replace("/home");
     console.log("ok")
   } else {
     console.log("Sign up failed");
   }
 };
 
-document
-  .querySelector(".signup-form")
-  .addEventListener("submit", signupFormHandler);
+document.querySelector(".signup-form").addEventListener("submit", signupFormHandler);

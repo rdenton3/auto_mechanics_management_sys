@@ -5,8 +5,12 @@ const withAuth = require("../utils/auth");
 // the home page is generic and will be shown to everyone
 // need to either login or signup
 
-router.get("/home", (req, res) => {
+router.get("/home", withAuth,(req, res) => {
   res.render("home");
+});
+
+router.get("/", (req, res) => {
+  res.render("login");
 });
 
 //MB create render login
@@ -20,12 +24,12 @@ router.get("/signup", (req, res) => {
 });
 
 //MB create render status
-router.get("/status", (req, res) => {
+router.get("/status", withAuth, (req, res) => {
   res.render("status");
 });
 
 //MB create render schedule
-router.get("/schedule", (req, res) => {
+router.get("/schedule", withAuth, (req, res) => {
   res.render("schedule");
 });
 
