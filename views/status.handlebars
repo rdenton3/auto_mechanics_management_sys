@@ -1,10 +1,10 @@
-
 <div class="d-flex align-items-stretch justify-content-around flex-wrap">
 
         <!-- monitor section-->
         <div class="col-sm-8 monitor">
 
             <!-- date time  -->
+            <!-- <div>date</div> -->
             <div class="d-flex justify-content-around flex-wrap">
                 <div class="container-fluid">
                     <div class="row justify-content-between">
@@ -23,7 +23,7 @@
             <!-- image -->
             <div>
                 <div class="bodyimage">
-                      <img src="/static/assets/image/IMG_4646.png" alt="fastnfurious-logo" width="80%" height="auto">
+                    <img src="/static/assets/image/IMG_4646.png" alt="" width="80%" height="auto">
                 </div>
             </div>
 
@@ -48,70 +48,18 @@
                                 <p class="card-text">Date/Time</p>
                                 <ul class="nav justify-content-end service-link">
                                     <li class="nav-item">
-                                        <a class="nav-link service-nav" aria-current="page" href="#">Another car</a>
+                                        <a class="nav-link service-nav" aria-current="page" href="#">add car</a>
                                     </li>
-                                    <li class="nav-item">
+                                    {{!-- <li class="nav-item">
                                         <a class="nav-link service-nav" href="#">Service history</a>
-                                    </li>
+                                    </li> --}}
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-        {{!-- service-history --}}
-
-                {{!-- <div class="row service-history justify-content-around">
-                   <h4>Service History</h4>
-                    <div class="col-sm-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Date</h5>
-                                <p>mileage: 10000000</p>
-                                <p class="card-text">Brake inspection</p>
-                                <p class="card-text">Brake inspection</p>
-                                <p class="card-text">Brake inspection</p>
-                                <p class="card-text">Brake inspection</p>
-                                <p class="card-text">Brake inspection</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Date</h5>
-                                <p>mileage: 10000000</p>
-                                <p class="card-text">Brake inspection</p>
-                                <p class="card-text">Brake inspection</p>
-                                <p class="card-text">Brake inspection</p>
-                                <p class="card-text">Brake inspection</p>
-                                <p class="card-text">Brake inspection</p>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Date</h5>
-                                <p>mileage: 10000000</p>
-                                <p class="card-text">Brake inspection</p>
-                                <p class="card-text">Brake inspection</p>
-                                <p class="card-text">Brake inspection</p>
-                                <p class="card-text">Brake inspection</p>
-                                <p class="card-text">Brake inspection</p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-        </div> --}}
+        </div>
 
 
 
@@ -131,11 +79,11 @@
               </div> --}}
               <ul class="list-group list-group-flush">
                 {{#each cars as |car|}}
-
+                    <li class="list-group-item">{{item}}</li>
+                {{/each}}               
      
                 {{!-- <li class="list-group-item">{{car.car.make}}</li> --}}
-                <li class="list-group-item">{{item}}</li>
-                {{/each}}
+                
                {{!-- <li class="list-group-item">item</li>
                 <li class="list-group-item">item</li>
                 <li class="list-group-item">item</li>
@@ -146,9 +94,9 @@
             </div>
     
             <br><br>
-
+            {{#if cars.schedule.complete_id}}
             {{!-- Car Completed - checkmark --}}
-            {{!-- <div>
+            <div>
               <div>
               <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
               <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
@@ -158,7 +106,8 @@
             <div class="readypickup">
               <h2>Ready for Pick Up</h2>
               </div>
-              </div> --}}
+              </div>
+              {{/if}}
         </div>
 
     </div>

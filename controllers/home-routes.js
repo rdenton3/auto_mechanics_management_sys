@@ -5,22 +5,22 @@ const withAuth = require("../utils/auth");
 // the home page is generic and will be shown to everyone
 // need to either login or signup
 
+
 router.get("/home", withAuth,(req, res) => {
   res.render("home",{layout: 'landing',loggedIn: req.session.loggedIn});
 });
 
 router.get("/", (req, res) => {
   res.render("login");
-});
 
 //MB create render login
 router.get("/login", (req, res) => {
-  res.render("login");
+    res.render("login", { layout: 'login-signup' });
 });
 
 //MB create render login
-router.get("/signup", (req, res) => {
-  res.render("signup");
+router.get("/", (req, res) => {
+    res.render("signup", { layout: 'login-signup' });
 });
 
 //MB create render status
@@ -31,27 +31,18 @@ router.get("/status", withAuth, (req, res) => {
 //MB create render schedule
 router.get("/schedule", withAuth, (req, res) => {
   res.render("schedule",{loggedIn: req.session.loggedIn});
-});
+
 
 router.post("/logout", (req, res) => {
-  if (req.session.loggedIn) {
-    req.session.destroy(() => {
-      res.status(204).end();
-    });
-  } else {
-    res.status(404).end();
-  }
+    if (req.session.loggedIn) {
+        req.session.destroy(() => {
+            res.status(204).end();
+        });
+    } else {
+        res.status(404).end();
+    }
 });
 
-// router.post("/logout", (req, res) => {
-//   if (req.session.loggedIn) {
-//     req.session.destroy(() => {
-//       res.status(204).end();
-//     });
-//   } else {
-//     res.status(404).end();
-//   }
-// });
 
 
 
