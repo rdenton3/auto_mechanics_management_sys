@@ -12,8 +12,8 @@
                             <h6>Series | Year</h6>
                         </div>
                         <div class="col-4 datetime">
-                            <h2>DATE</h2>
-                            <h2>TIME</h2>
+                            <div class="date">DATE</div>
+                            <div class="time">time</div>
                         </div>
                     </div>
                 </div>
@@ -47,11 +47,11 @@
                                 <p class="card-text">Date/Time</p>
                                 <ul class="nav justify-content-end service-link">
                                     <li class="nav-item">
-                                        <a class="nav-link service-nav" aria-current="page" href="#">Another car</a>
+                                        <a class="nav-link service-nav" aria-current="page" href="#">add car</a>
                                     </li>
-                                    <li class="nav-item">
+                                    {{!-- <li class="nav-item">
                                         <a class="nav-link service-nav" href="#">Service history</a>
-                                    </li>
+                                    </li> --}}
                                 </ul>
                             </div>
                         </div>
@@ -59,60 +59,7 @@
                 </div>
             </div>
 
-        {{!-- service-history --}}
-
-                {{!-- <div class="row service-history justify-content-around">
-                   <h4>Service History</h4>
-                    <div class="col-sm-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Date</h5>
-                                <p>mileage: 10000000</p>
-                                <p class="card-text">Brake inspection</p>
-                                <p class="card-text">Brake inspection</p>
-                                <p class="card-text">Brake inspection</p>
-                                <p class="card-text">Brake inspection</p>
-                                <p class="card-text">Brake inspection</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Date</h5>
-                                <p>mileage: 10000000</p>
-                                <p class="card-text">Brake inspection</p>
-                                <p class="card-text">Brake inspection</p>
-                                <p class="card-text">Brake inspection</p>
-                                <p class="card-text">Brake inspection</p>
-                                <p class="card-text">Brake inspection</p>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Date</h5>
-                                <p>mileage: 10000000</p>
-                                <p class="card-text">Brake inspection</p>
-                                <p class="card-text">Brake inspection</p>
-                                <p class="card-text">Brake inspection</p>
-                                <p class="card-text">Brake inspection</p>
-                                <p class="card-text">Brake inspection</p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-        </div> --}}
-
-
+       
 
 
         <!-- repair section-->
@@ -145,9 +92,9 @@
             </div>
     
             <br><br>
-
+            {{#if cars.schedule.complete_id}}
             {{!-- Car Completed - checkmark --}}
-            {{!-- <div>
+            <div>
               <div>
               <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
               <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
@@ -157,7 +104,8 @@
             <div class="readypickup">
               <h2>Ready for Pick Up</h2>
               </div>
-              </div> --}}
+              </div>
+              {{/if}}
         </div>
 
     </div>
