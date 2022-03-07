@@ -19,9 +19,12 @@ router.post('/', withAuth, async (req, res) => {
         })
         const repairData = await Repairs.create({
             car_id: carData.id,
-            user_id: req.session.user_id
+            user_id: req.session.user_id,
+            item: req.body.item,
+            status_id: null
         })
-    } catch (e) {
+        res.json({carData,scheduleData,repairData})
+    } catch (err) {
         console.log(err);
         res.status(500).json(err);
     }
