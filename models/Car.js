@@ -33,7 +33,6 @@ Car.init(
       type: DataTypes.INTEGER,
 
     },
-
     user_id: {
       type: DataTypes.INTEGER,
       references: {
