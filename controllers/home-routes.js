@@ -6,7 +6,7 @@ const withAuth = require("../utils/auth");
 // need to either login or signup
 
 router.get("/home", withAuth,(req, res) => {
-  res.render("home",{loggedIn: req.session.loggedIn});
+  res.render("home",{layout: 'landing',loggedIn: req.session.loggedIn});
 });
 
 router.get("/", (req, res) => {
