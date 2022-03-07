@@ -1,10 +1,10 @@
-
 <div class="d-flex align-items-stretch justify-content-around flex-wrap">
 
         <!-- monitor section-->
         <div class="col-sm-8 monitor">
 
             <!-- date time  -->
+            <!-- <div>date</div> -->
             <div class="d-flex justify-content-around flex-wrap">
                 <div class="container-fluid">
                     <div class="row justify-content-between">
@@ -13,8 +13,8 @@
                             <h6>Series | Year</h6>
                         </div>
                         <div class="col-4 datetime">
-                            <div class="date">DATE</div>
-                            <div class="time">time</div>
+                            <h2>DATE</h2>
+                            <h2>TIME</h2>
                         </div>
                     </div>
                 </div>
@@ -23,7 +23,7 @@
             <!-- image -->
             <div>
                 <div class="bodyimage">
-                      <img src="/static/assets/image/IMG_4646.png" alt="fastnfurious-logo" width="80%" height="auto">
+                    <img src="/static/assets/image/IMG_4646.png" alt="" width="80%" height="auto">
                 </div>
             </div>
 
@@ -59,8 +59,9 @@
                     </div>
                 </div>
             </div>
+        </div>
 
-       
+
 
 
         <!-- repair section-->
@@ -78,11 +79,11 @@
               </div> --}}
               <ul class="list-group list-group-flush">
                 {{#each cars as |car|}}
-
+                    <li class="list-group-item">{{item}}</li>
+                {{/each}}               
      
                 {{!-- <li class="list-group-item">{{car.car.make}}</li> --}}
-                <li class="list-group-item">{{item}}</li>
-                {{/each}}
+                
                {{!-- <li class="list-group-item">item</li>
                 <li class="list-group-item">item</li>
                 <li class="list-group-item">item</li>

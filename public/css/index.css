@@ -5,9 +5,9 @@ header {
 
 .homepage img {
     object-fit: cover;
-    width: 100vw;
-    height: auto;
-    position: fixed;
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
 
 .navbar-brand {

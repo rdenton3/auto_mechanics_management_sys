@@ -6,47 +6,47 @@ const withAuth = require("../utils/auth");
 // need to either login or signup
 
 router.get("/home", (req, res) => {
-  res.render("home");
+    res.render("home", { layout: 'landing' });
 });
 
 //MB create render login
 router.get("/login", (req, res) => {
-  res.render("login");
+    res.render("login", { layout: 'login-signup' });
 });
 
 //MB create render login
-router.get("/signup", (req, res) => {
-  res.render("signup");
+router.get("/", (req, res) => {
+    res.render("signup", { layout: 'login-signup' });
 });
 
 //MB create render status
 router.get("/status", (req, res) => {
-  res.render("status");
+    res.render("status");
 });
 
 //MB create render schedule
 router.get("/schedule", (req, res) => {
-  res.render("schedule");
+    res.render("schedule");
 });
 
 router.post("/logout", (req, res) => {
-  if (req.session.loggedIn) {
-    req.session.destroy(() => {
-      res.status(204).end();
-    });
-  } else {
-    res.status(404).end();
-  }
+    if (req.session.loggedIn) {
+        req.session.destroy(() => {
+            res.status(204).end();
+        });
+    } else {
+        res.status(404).end();
+    }
 });
 
 router.post("/logout", (req, res) => {
-  if (req.session.loggedIn) {
-    req.session.destroy(() => {
-      res.status(204).end();
-    });
-  } else {
-    res.status(404).end();
-  }
+    if (req.session.loggedIn) {
+        req.session.destroy(() => {
+            res.status(204).end();
+        });
+    } else {
+        res.status(404).end();
+    }
 });
 
 
