@@ -48,6 +48,12 @@ body {
     text-align: center;
 }
 
+.logo_title {
+    text-align: center;
+    margin-bottom: 3rem;
+    width: 500px;
+}
+
 
 /* 
 .form__message {
