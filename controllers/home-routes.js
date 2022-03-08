@@ -6,12 +6,12 @@ const withAuth = require("../utils/auth");
 // need to either login or signup
 
 
-router.get("/home", withAuth,(req, res) => {
-  res.render("home",{layout: 'landing',loggedIn: req.session.loggedIn});
+router.get("/home", withAuth, (req, res) => {
+    res.render("home", { layout: 'landing', loggedIn: req.session.loggedIn });
 });
 
 router.get("/", (req, res) => {
-  res.render("login",{ layout: 'login-signup' })
+    res.render("login", { layout: 'login-signup' })
 });
 
 //MB create render login
@@ -26,13 +26,13 @@ router.get("/signup", (req, res) => {
 
 //MB create render status
 router.get("/status", withAuth, (req, res) => {
-  console.log("view status")
-  res.render("status",{loggedIn: req.session.loggedIn});
+    console.log("view status")
+    res.render("status", { loggedIn: req.session.loggedIn });
 });
 
 //MB create render schedule
 router.get("/schedule", withAuth, (req, res) => {
-  res.render("schedule",{loggedIn: req.session.loggedIn});
+    res.render("schedule", { layout: 'schedule', loggedIn: req.session.loggedIn });
 });
 
 router.post("/logout", (req, res) => {
