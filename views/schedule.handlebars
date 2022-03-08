@@ -1,312 +1,105 @@
-
-
-{{!-- <article>
-  <form class="schedule-form">
-    <div>
-        <label>Make</label>
-      <input id="car-make" type="text"/>
-      <label>Model</label>
-      <input id="car-model" type="text"/>
-        <label>Year</label>
-      <input id="car-year" type="text"/>
-      <label>Mileage</label>
-      <input id="car-mileage" type="text"/>
-        <label>Date</label>
-      <input id="date" type="text"/>
-            <label>VIN</label>
-      <input id="vin" type="text"/>
-                  <label>Repair</label>
-      <input id="repair" type="text"/>
-    </div>
-    <button type="submit">Submit</button>
-  </form>
-</article> --}}
-
-<section>
-    <div class="justify-content-center">
-        <h1 class="schedule justify-content-center">APPOINTMENT SCHEDULER</h1>
-
-        <nav class="navbar navbar-light bg-light nav-schedule">
-            <form class="container-fluid justify-content-center">
-                <button class="btn btn-schedule btn-outline-success me-2" type="button">Get Started</button>
-                <button class="btn btn-schedule btn-outline-success me-2" type="button">Service</button>
-                <button class="btn btn-schedule btn-outline-success me-2" type="button">Calendar</button>
-            </form>
-        </nav>
+    <div class=“justify-content-center”>
+        <h1 class=“schedule justify-content-center”>APPOINTMENT SCHEDULER</h1>
 <br><br>
         {{!-- Vehicle information --}}
-
-        <div class="row g-2">
-            <h2 class="text-center my-4">
+        <div class=“row g-2”>
+            <h2 class=“text-center my-4">
                     VEHICLE INFORMATION
             </h2>
-        <div class="col-md">
-            <div class="form-floating">
-            <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+        <div class=“col-md”>
+            {{!-- <div class=“form-floating”>
+            <select class=“form-select” id=“floatingSelectGrid” aria-label=“Floating label select example”>
                 <option selected>Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option value=“1">One</option>
+                <option value=“2”>Two</option>
+                <option value=“3">Three</option>
             </select>
-            <label for="floatingSelectGrid">Works with selects</label>
-            </div>
+            <label for=“floatingSelectGrid”>Works with selects</label>
+            </div> --}}
         </div>
-        <div class="col-md">
-            <div class="form-floating">
-            <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+        <div class=“col-md”>
+            {{!-- <div class=“form-floating”>
+            <select class=“form-select” id=“floatingSelectGrid” aria-label=“Floating label select example”>
                 <option selected>Open this select menu</option>
-                <option value="1">Audi</option>
-                <option value="2">BMW</option>
-                <option value="3">HONDA</option>
+                <option value=“1”>Audi</option>
+                <option value=“2">BMW</option>
+                <option value=“3”>HONDA</option>
             </select>
-            <label for="floatingSelectGrid">Works with selects</label>
-            </div>
+            <label for=“floatingSelectGrid”>Works with selects</label>
+            </div> --}}
         </div>
         </div>
-
-        <div class="row">
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Year" aria-label="First name">
+        <div class=“row”>
+            <div class=“col”>
+                <input type=“text” class=“form-control” placeholder=“Year” aria-label=“First name”>
             </div>
-            <div class="col">
-             <input type="text" class="form-control" placeholder="VIN" aria-label="Last name">
+            <div class=“col”>
+             <input type=“text” class=“form-control” placeholder=“VIN” aria-label=“Last name”>
             </div>
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Make" aria-label="First name">
+            <div class=“col”>
+                <input type=“text” class=“form-control” placeholder=“Make” aria-label=“First name”>
             </div>
-            <div class="col">
-             <input type="text" class="form-control" placeholder="Mileage" aria-label="Last name">
+            <div class=“col”>
+             <input type=“text” class=“form-control” placeholder=“Mileage” aria-label=“Last name”>
             </div>
-             <div class="col">
-             <input type="text" class="form-control" placeholder="Model" aria-label="Last name">
+             <div class=“col”>
+             <input type=“text” class=“form-control” placeholder=“Model” aria-label=“Last name”>
             </div>
         </div>
-
-
         {{!-- end vehicle section --}}
-
 <br><br>
         {{!-- Service information --}}
-        <div class="form-floating justify-content-center">
-            <h2 class="text-center my-4">
-                    SELECT SERVICE
+        <div class=“form-floating justify-content-center”>
+            <h2 class=“text-center my-4">
+                    Describe SERVICE
             </h2>
             <div>
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-            <label for="floatingTextarea2">Please select at least one service or add comments to continue</label>
+            <textarea class=“form-control” placeholder=“Leave a comment here” id=“floatingTextarea2” style=“height: 100px”></textarea>
+            <label for=“floatingTextarea2”>Please select at least one service or add comments to continue</label>
             </div>
-            <div class="form-group row justify-content-center">
-                <div class="col-sm-5">
-                    <button type="submit" class="btn btn-form">
+            <div class=“form-group row justify-content-center”>
+                <div class=“col-sm-5”>
+                    {{!-- <button type=“submit” class=“btn btn-form”>
                         Next
-                    </button>
+                    </button> --}}
                 </div>
             </div>
         </div>
-
         {{!-- end service section --}}
-        
-
         {{!-- Calendar --}}
-        <div class="container mt-4 p-4 justify-content-center">
-        <div class="row">
-            <div class="col-md-12">
-                <h2 class="text-center my-4">
+        <div class=“container mt-4 p-4 justify-content-center”>
+        <div class=“row”>
+            <div class=“col-md-12">
+                <h2 class=“text-center my-4”>
                     SELECT SCHEDULE
                 </h2>
                 <form>
-
-                    <div class="form-group row">
-                        <label class="col-sm-4 col-lg-4">
+                    <div class=“form-group row”>
+                        <label class=“col-sm-4 col-lg-4”>
                       Date
                     </label>
-                        <div class="col-sm-8 col-lg-8">
-                            <input type="date" id="date" class="form-control">
+                        <div class=“col-sm-8 col-lg-8">
+                            <input type=“date” id=“date” class=“form-control”>
                         </div>
                     </div>
-
-                    <div class="form-group row">
-                        <label class="col-sm-4 col-lg-4">
+                    <div class=“form-group row”>
+                        <label class=“col-sm-4 col-lg-4”>
                        Time
                     </label>
-                        <div class="col-sm-8 col-lg-8">
-                            <input type="time" id="time" class="form-control">
+                        <div class=“col-sm-8 col-lg-8">
+                            <input type=“time” id=“time” class=“form-control”>
                         </div>
                     </div>
-                   
-                    <div class="form-group row justify-content-center">
-                        <div class="col-sm-5">
-                            <button type="submit" class="btn btn-form">
+                    <div class=“form-group row justify-content-center”>
+                        <div class=“col-sm-5”>
+                            <button type=“submit” class=“btn btn-form”>
                             Confirm
                         </button>
                         </div>
                     </div>
-
                 </form>
             </div>
         </div>
         </div>
-    
-    
-
-
     </div>
 </section>
-
-
-{{!-- <div id="app">
-        <full-page :options="options" id="fullpage" ref="fullpage">
-            <div class="section">
-                {{!-- <h3>vue-fullpage.js</h3> --}}
-                <h1 class="schedule justify-content-center">APPOINTMENT SCHEDULER</h1>
-
-        <nav class="navbar navbar-light bg-light nav-schedule">
-            <form class="container-fluid justify-content-center">
-                <button class="btn btn-schedule btn-outline-success me-2" type="button">Get Started</button>
-                <button class="btn btn-schedule btn-outline-success me-2" type="button">Service</button>
-                <button class="btn btn-schedule btn-outline-success me-2" type="button">Calendar</button>
-            </form>
-        </nav>
-            </div>
-            <div class="section">
-                <div class="row g-2">
-            <h2 class="text-center my-4">
-                    VEHICLE INFORMATION
-            </h2>
-        <div class="col-md">
-            <div class="form-floating">
-            <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
-                <option selected>Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-            </select>
-            <label for="floatingSelectGrid">Works with selects</label>
-            </div>
-        </div>
-        <div class="col-md">
-            <div class="form-floating">
-            <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
-                <option selected>Open this select menu</option>
-                <option value="1">Audi</option>
-                <option value="2">BMW</option>
-                <option value="3">HONDA</option>
-            </select>
-            <label for="floatingSelectGrid">Works with selects</label>
-            </div>
-        </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Year" aria-label="First name">
-            </div>
-            <div class="col">
-             <input type="text" class="form-control" placeholder="VIN" aria-label="Last name">
-            </div>
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Make" aria-label="First name">
-            </div>
-            <div class="col">
-             <input type="text" class="form-control" placeholder="Mileage" aria-label="Last name">
-            </div>
-             <div class="col">
-             <input type="text" class="form-control" placeholder="Model" aria-label="Last name">
-            </div>
-        </div>
-                </div>
-            </div>
-            <div class="section">
-                {{!-- <h3>Section 3</h3> --}}
-                <div class="form-floating justify-content-center">
-            <h2 class="text-center my-4">
-                    SELECT SERVICE
-            </h2>
-            <div>
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-            <label for="floatingTextarea2">Please select at least one service or add comments to continue</label>
-            </div>
-            <div class="form-group row justify-content-center">
-                <div class="col-sm-5">
-                    <button type="submit" class="btn btn-form">
-                        Next
-                    </button>
-                </div>
-            </div>
-        </div>
-
-            </div>
-            <div class="section">
-                {{!-- <h3>Section 4</h3> --}}
-                <div class="container mt-4 p-4 justify-content-center">
-        <div class="row">
-            <div class="col-md-12">
-                <h2 class="text-center my-4">
-                    SELECT SCHEDULE
-                </h2>
-                <form>
-
-                    <div class="form-group row">
-                        <label class="col-sm-4 col-lg-4">
-                      Date
-                    </label>
-                        <div class="col-sm-8 col-lg-8">
-                            <input type="date" id="date" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-sm-4 col-lg-4">
-                       Time
-                    </label>
-                        <div class="col-sm-8 col-lg-8">
-                            <input type="time" id="time" class="form-control">
-                        </div>
-                    </div>
-                   
-                    <div class="form-group row justify-content-center">
-                        <div class="col-sm-5">
-                            <button type="submit" class="btn btn-form">
-                            Confirm
-                        </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-        </div>
-    
-    
-            </div>
-        </full-page>
-    </div> --}}
-
-
-    
-
-    {{!-- <div id="app">
-        <full-page :options="options" id="fullpage" ref="fullpage">
-            <div class="section">
-                <h3>vue-fullpage.js</h3>
-            </div>
-            <div class="section">
-                <div class="slide">
-                    <h3>Slide 2.1</h3>
-                </div>
-                <div class="slide">
-                    <h3>Slide 2.2</h3>
-                </div>
-                <div class="slide">
-                    <h3>Slide 2.3</h3>
-                </div>
-            </div>
-            <div class="section">
-                <h3>Section 3</h3>
-            </div>
-            <div class="section">
-                <h3>Section 4</h3>
-            </div>
-        </full-page>
-
-        </div> --}}
-<script src="/static/javascript/schedule-appt.js"></script> 
-
-        </div> --}}
