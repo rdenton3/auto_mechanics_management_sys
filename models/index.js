@@ -31,6 +31,11 @@ Repairs.belongsTo(Car, {
   onDelete: "SET NULL",
 });
 
+Repairs.belongsTo(User, {
+  foreignKey: "user_id",
+  onDelete: "SET NULL",
+});
+
 Repairs.belongsTo(Schedule, {
   foreignKey: "car_id",
   onDelete: "SET NULL",

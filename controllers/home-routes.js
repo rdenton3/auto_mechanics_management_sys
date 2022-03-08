@@ -11,7 +11,7 @@ router.get("/home", withAuth,(req, res) => {
 });
 
 router.get("/", (req, res) => {
-  res.render("login");
+  res.render("login",{ layout: 'login-signup' })
 });
 
 //MB create render login
@@ -20,12 +20,13 @@ router.get("/login", (req, res) => {
 });
 
 //MB create render login
-router.get("/", (req, res) => {
+router.get("/signup", (req, res) => {
     res.render("signup", { layout: 'login-signup' });
 });
 
 //MB create render status
 router.get("/status", withAuth, (req, res) => {
+  console.log("view status")
   res.render("status",{loggedIn: req.session.loggedIn});
 });
 

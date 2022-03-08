@@ -52,6 +52,7 @@ router.get("/cars", withAuth, (req, res) => {
     // find the car that matches with the corresponding id
     // Car.findOne({
     console.log(req.session);
+    console.log("API CARS")
     Repairs.findAll({
             where: {
                 // grab car id from the params
@@ -66,7 +67,11 @@ router.get("/cars", withAuth, (req, res) => {
                 },
                 {
                     model: Car,
-                    attributes: ["make", "model"]
+                    attributes: ["make", "model","year"]
+                },
+                {
+                    model: User,
+                    attributes: ["email", "username"]
                 },
             ],
         })

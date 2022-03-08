@@ -9,13 +9,13 @@
                 <div class="container-fluid">
                     <div class="row justify-content-between">
                         <div class="col-4 model">
-                            <h2>MODEL</h2>
-                            <h6>Series | Year</h6>
+                            <h2>{{cars.0.car.model}}</h2>
+                            <h6>{{cars.0.car.make}} | {{cars.0.car.year}}</h6>
                         </div>
-                        <div class="col-4 datetime">
+                        {{!-- <div class="col-4 datetime">
                             <h2>DATE</h2>
                             <h2>TIME</h2>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -33,11 +33,9 @@
                     <div class="col-sm-6">
                         <div class="card card-border">
                             <div class="card-body">
-                                <h5 class="card-title">Car Owner Informatioon</h5>
-                                <p class="card-text">Natthaphon Foithong</p>
-                                <p class="card-text">natt@gmail.com</p>
-                                <p class="card-text">703-397-7359</p>
-
+                                <h5 class="card-title">Car Owner Information</h5>
+                                <p class="card-text">{{cars.0.user.username}}</p>
+                                <p class="card-text">{{cars.0.user.email}}</p>
                             </div>
                         </div>
                     </div>
@@ -47,9 +45,9 @@
                                 <h5 class="card-title">Estimate Pick Up Time</h5>
                                 <p class="card-text">Date/Time</p>
                                 <ul class="nav justify-content-end service-link">
-                                    <li class="nav-item">
+                                    {{!-- <li class="nav-item">
                                         <a class="nav-link service-nav" aria-current="page" href="#">add car</a>
-                                    </li>
+                                    </li> --}}
                                     {{!-- <li class="nav-item">
                                         <a class="nav-link service-nav" href="#">Service history</a>
                                     </li> --}}
