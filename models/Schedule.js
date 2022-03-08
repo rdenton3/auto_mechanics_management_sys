@@ -15,6 +15,10 @@ Schedule.init(
       type: DataTypes.STRING,
       //allowNull: false,
     },
+    time: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {

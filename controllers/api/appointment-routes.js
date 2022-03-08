@@ -52,7 +52,7 @@ router.get("/schedule", withAuth, (req, res) => {
             // serialize data before passing to template
             const appts = apptData.map((appt) => appt.get({ plain: true }));
             // res.json(appts);
-            // console.log(appts)
+            console.log(appts)
             res.render("show-appt", { appts, loggedIn: true });
             console.log("I ran")
 
