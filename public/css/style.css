@@ -171,7 +171,8 @@ footer {
 
 /* login-signup section */
 
-.login-signup {
+
+/* .login-signup {
     --color-primary: #42A2DA;
     --color-secondary: #003C5A;
     --color-error: #cc3333;
@@ -298,4 +299,4 @@ footer {
 
 .form__link:hover {
     text-decoration: underline;
-}
+} */
