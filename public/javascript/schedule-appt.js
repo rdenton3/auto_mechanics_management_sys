@@ -43,4 +43,4 @@ async function appointmentHandler(event) {
   }
 }
 // update these 
-document.querySelector('.schedule-form').addEventListener('submit', appointmentHandler);
+document.querySelector('#fullpage').addEventListener('submit', appointmentHandler);

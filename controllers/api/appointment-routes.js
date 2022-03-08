@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const { User, Schedule, Car, Repairs } = require('../../models');
 const withAuth = require('../../utils/auth');
-// A second post request will be needed to add the car to the database
-// is it easier to make two separate post requests or combine it all into one?
+
+// post request that allows user to create an appt
+// creates the car, the repair needed and the appointment
 router.post('/', withAuth, async (req, res) => {
     try {
         const carData = await Car.create({
@@ -20,7 +21,7 @@ router.post('/', withAuth, async (req, res) => {
         const repairData = await Repairs.create({
             car_id: carData.id,
             user_id: req.session.user_id,
-            item: req.body.item,
+            item: req.body.repair,
             status_id: null
         })
         res.json({carData,scheduleData,repairData})
@@ -30,41 +31,37 @@ router.post('/', withAuth, async (req, res) => {
     }
 });
 
-// need a post request that allows user to post their apoointment data to server
-// sign up page
-// router.post('/', withAuth, (req, res) => {
-//     // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
-//     Schedule.create({
-//       Date: req.body.date,
-//       user_id: req.session.id,
-//     //   I need to pass through car id here as well but not exactly sure how to accomplish that car_id: 
-//     })
-//       .then(apptData => {
-//         res.json(apptData);
-//       })
-//       .catch(err => {
-//         console.log(err);
-//         res.status(500).json(err);
-//       });
-//   });
+// get request that allows user to see their upcoming appointments
+router.get("/schedule", withAuth, (req, res) => {
+    // find the appointments that match with the corresponding user id
+    Schedule.findAll({
+            where: {
+                user_id: req.session.user_id
+            }
+        })
+        // then pass appt into the template
+        .then((apptData) => {
+            //   if user doesnt have any cars, let them know
+            if (!apptData) {
+                // error message might be different from actually letting them know they dont have cars registered
+                res
+                    .status(404)
+                    .json({ message: "You have not made any appointments yet" });
+                return;
+            }
+            // serialize data before passing to template
+            const appts = apptData.map((appt) => appt.get({ plain: true }));
+            // res.json(appts);
+            // console.log(appts)
+            res.render("show-appt", { appts, loggedIn: true });
+            console.log("I ran")
 
+        })
+        .catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
 
-
-
-// do I also need to make a third post request to repairs to update what repairs are being done?
-// router.post('/', (req, res) => {
-//     Repairs.create({
-//       item: req.body.model,
-//       status_id: req.body.status_id,
-//       user_id: req.session.id
-//     })
-//       .then(carData => {
-//         res.json(carData);
-//       })
-//       .catch(err => {
-//         console.log(err);
-//         res.status(500).json(err);
-//       });
-//   });
 
 module.exports = router;
