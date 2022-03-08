@@ -12,6 +12,7 @@ router.get("/home", withAuth,(req, res) => {
 
 router.get("/", (req, res) => {
   res.render("login");
+});
 
 //MB create render login
 router.get("/login", (req, res) => {
@@ -31,7 +32,7 @@ router.get("/status", withAuth, (req, res) => {
 //MB create render schedule
 router.get("/schedule", withAuth, (req, res) => {
   res.render("schedule",{loggedIn: req.session.loggedIn});
-
+});
 
 router.post("/logout", (req, res) => {
     if (req.session.loggedIn) {
