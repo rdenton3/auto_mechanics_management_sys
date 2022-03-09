@@ -6,7 +6,7 @@ new Vue({
                 afterLoad: this.afterLoad,
                 navigation: true,
                 anchors: ['page1', 'page2', 'page3'],
-                sectionsColor: ['#41b883', '#ff5f45', '#42a2da', '#fec401', '#1bcee6', '#ee1a59', '#2c3e4f', '#ba5be9', '#b4b8ab']
+                sectionsColor: ['#42a2da', '#00355A', '#42a2da', '#00355A']
             },
         }
     },

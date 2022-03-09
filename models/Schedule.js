@@ -34,7 +34,7 @@ Schedule.init(
       }
     },
     complete_id: {
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.INTEGER,
     },
  
   },
