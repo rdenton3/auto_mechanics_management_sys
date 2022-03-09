@@ -16,7 +16,9 @@ router.post('/', withAuth, async (req, res) => {
         })
         const scheduleData = await Schedule.create({
             Date: req.body.date,
+            time: req.body.time,
             user_id: req.session.user_id,
+            car_id: carData.id
         })
         const repairData = await Repairs.create({
             car_id: carData.id,
@@ -25,6 +27,9 @@ router.post('/', withAuth, async (req, res) => {
             status_id: null
         })
         res.json({carData,scheduleData,repairData})
+        console.log(carData)
+        console.log(scheduleData)
+        console.log(repairData)
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
@@ -37,7 +42,13 @@ router.get("/schedule", withAuth, (req, res) => {
     Schedule.findAll({
             where: {
                 user_id: req.session.user_id
-            }
+            },
+            include: [
+                {
+                  model: Car,
+                  attributes: ['make','model']
+                }
+              ]
         })
         // then pass appt into the template
         .then((apptData) => {

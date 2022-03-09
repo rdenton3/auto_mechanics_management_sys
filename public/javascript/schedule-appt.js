@@ -12,7 +12,7 @@ async function appointmentHandler(event) {
     const date = document.querySelector('#date').value.trim();
     const time = document.querySelector('#time').value.trim();
     const repair = document.querySelector('#repair').value.trim();
-    console.log(year,make,model,mileage,repair,vin,date)
+    console.log(year,make,model,mileage,repair,vin,date,time)
     // this will be the repair info passed through
     // not sure how this will be passed through? I assume as an array since user
     // can pick from a variety of options with checkboxes
