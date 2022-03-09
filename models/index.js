@@ -40,6 +40,16 @@ Repairs.belongsTo(Schedule, {
   foreignKey: "car_id",
   onDelete: "SET NULL",
 });
+
+Schedule.belongsTo(Car, {
+  foreignKey: "car_id",
+  onDelete: "SET NULL",
+});
+
+// Schedule.belongsTo(Car, {
+//   foreignKey: "car_id",
+//   onDelete: "SET NULL",
+// });
 // User.belongsToMany(Schedule, {
 //   // through: Vote,
 //   // as: 'voted_posts',

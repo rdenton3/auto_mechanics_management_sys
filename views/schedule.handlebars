@@ -1,4 +1,3 @@
-
 <div id="app">
         <full-page :options="options" id="fullpage" ref="fullpage">
             <div class="section">
@@ -8,19 +7,19 @@
                 <h3>VEHICLE INFORMATION</h3>
                 <div class="form-input">
                     <div class="form-input-group">
-                        <input type="text" class="form-control" placeholder="Year" aria-label="First name">
+                        <input type="text" class="form-control" id="car-year" placeholder="Year" aria-label="First name">
                     </div>
                     <div class="form-input-group">
-                        <input type="text" class="form-control" placeholder="VIN" aria-label="Last name">
+                        <input type="text" class="form-control" id="vin" placeholder="VIN" aria-label="Last name">
                     </div>
                     <div class="form-input-group">
-                        <input type="text" class="form-control" placeholder="Make" aria-label="First name">
+                        <input type="text" class="form-control" id="car-make" placeholder="Make" aria-label="First name">
                     </div>
                     <div class="form-input-group">
-                        <input type="text" class="form-control" placeholder="Model" aria-label="Last name">
+                        <input type="text" class="form-control" id="car-model" placeholder="Model" aria-label="Last name">
                     </div>
                     <div class="form-input-group">
-                        <input type="text" class="form-control" placeholder="Mileage" aria-label="Last name">
+                        <input type="text" class="form-control" id="car-mileage" placeholder="Mileage" aria-label="Last name">
                     </div>
                 </div>
             </div>
@@ -29,7 +28,7 @@
                 <div class="form-input">
                     <label for="floatingTextarea2">Please select at least one service or add comments to continue</label>
 
-                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                    <textarea class="form-control" id="repair" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
                     </div>
             </div>
             <div class="section">
@@ -69,3 +68,4 @@
  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
     <script src="https://unpkg.com/vue-fullpage.js/dist/vue-fullpage.js"></script>
 <script src="/static/javascript/vue.js"></script>
+<script src="/static/javascript/schedule-appt.js"></script>

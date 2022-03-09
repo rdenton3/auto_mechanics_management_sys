@@ -35,6 +35,10 @@ router.get("/schedule", withAuth, (req, res) => {
     res.render("schedule", { layout: 'schedule', loggedIn: req.session.loggedIn });
 });
 
+router.get("/appointments/schedule", withAuth, (req, res) => {
+  res.render("show-appts", { layout: 'schedule', loggedIn: req.session.loggedIn });
+});
+
 router.post("/logout", (req, res) => {
     if (req.session.loggedIn) {
         req.session.destroy(() => {

@@ -10,8 +10,9 @@ async function appointmentHandler(event) {
     const vin = document.querySelector('#vin').value.trim();
     const mileage = document.querySelector('#car-mileage').value.trim();
     const date = document.querySelector('#date').value.trim();
+    const time = document.querySelector('#time').value.trim();
     const repair = document.querySelector('#repair').value.trim();
-    console.log(year,make,model,mileage,repair,vin,date)
+    console.log(year,make,model,mileage,repair,vin,date,time)
     // this will be the repair info passed through
     // not sure how this will be passed through? I assume as an array since user
     // can pick from a variety of options with checkboxes
@@ -29,18 +30,19 @@ async function appointmentHandler(event) {
           vin,
           repair,
           date,
+          time,
           mileage
         }),
         headers: { 'Content-Type': 'application/json' }
       });
-    //   // once user has submitted appt, take them back to which page? dashboard?
-    //   if (response.ok) {
-    //     document.location.replace('/dashboard/');
-    //   } else {
-    //     alert(response.statusText);
-    //   }
-    // }
+      // once user has submitted appt, take them back to homepage
+      if (response.ok) {
+        document.location.replace('/home');
+      } else {
+        alert(response.statusText);
+      }
+    }
   }
-}
+
 // update these 
-document.querySelector('.schedule-form').addEventListener('submit', appointmentHandler);
+document.querySelector('#fullpage').addEventListener('submit', appointmentHandler);

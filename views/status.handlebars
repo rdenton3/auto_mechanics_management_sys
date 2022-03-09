@@ -1,111 +1,85 @@
 <div class="d-flex align-items-stretch justify-content-around flex-wrap">
 
-        <!-- monitor section-->
-        <div class="col-sm-8 monitor">
-
-            <!-- date time  -->
-            <!-- <div>date</div> -->
-            <div class="d-flex justify-content-around flex-wrap">
-                <div class="container-fluid">
-                    <div class="row justify-content-between">
-                        <div class="col-4 model">
-                            <h2>{{cars.0.car.model}}</h2>
-                            <h6>{{cars.0.car.make}}  {{cars.0.car.year}}</h6>
-                        </div>
-                        {{!-- <div class="col-4 datetime">
-                            <h2>DATE</h2>
-                            <h2>TIME</h2>
-                        </div> --}}
-                    </div>
-                </div>
-            </div>
-
-            <!-- image -->
-            <div>
-                <div class="bodyimage">
-                    <img src="/static/assets/image/IMG_4646.png" alt="" width="80%" height="auto">
-                </div>
-            </div>
-
-            <!-- information -->
-            <div class="card card-information">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="card card-border">
-                            <div class="card-body">
-                                <h5 class="card-title">Car Owner Information</h5>
-                                <p class="card-text">{{cars.0.user.username}}</p>
-                                <p class="card-text">{{cars.0.user.email}}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="card card-border">
-                            <div class="card-body">
-                                <h5 class="card-title">Estimate Pick Up Time</h5>
-                                <p class="card-text">Date/Time</p>
-                                <ul class="nav justify-content-end service-link">
-                                    {{!-- <li class="nav-item">
-                                        <a class="nav-link service-nav" aria-current="page" href="#">add car</a>
-                                    </li> --}}
-                                    {{!-- <li class="nav-item">
-                                        <a class="nav-link service-nav" href="#">Service history</a>
-                                    </li> --}}
-                                </ul>
-                            </div>
-                        </div>
+    <!-- monitor section-->
+    <div class="col-sm-8 monitor">
+        <div class="d-flex justify-content-around flex-wrap">
+            <div class="container-fluid">
+                <div class="row justify-content-between">
+                    <div class="col-4 model">
+                        <h2>{{cars.0.car.model}}</h2>
+                        <h6>{{cars.0.car.make}} {{cars.0.car.year}}</h6>
                     </div>
                 </div>
             </div>
         </div>
 
-
-
-
-        <!-- repair section-->
-        <div class="col-sm-4 repair">
-            <!-- repair detail -->
-            <div>
-              <h4>REPAIR DETAIL</h4>
-              </div>
-            <div></div>
-            <hr>
-
-            <div class="card" style="width: 18rem;">
-              {{!-- <div class="card-header">
-                Featured
-              </div> --}}
-              <ul class="list-group list-group-flush">
-                {{#each cars as |car|}}
-                    <li class="list-group-item">{{item}}</li>
-                {{/each}}               
-     
-                {{!-- <li class="list-group-item">{{car.car.make}}</li> --}}
-                
-               {{!-- <li class="list-group-item">item</li>
-                <li class="list-group-item">item</li>
-                <li class="list-group-item">item</li>
-                <li class="list-group-item">item</li>
-                <li class="list-group-item">item</li>
-                <li class="list-group-item">item</li> --}}
-              </ul>
+        <!-- image -->
+        <div>
+            <div class="bodyimage">
+                <img src="/static/assets/image/IMG_4646.png" alt="" width="80%" height="auto">
             </div>
-    
-            <br><br>
-            {{#if cars.schedule.complete_id}}
-            {{!-- Car Completed - checkmark --}}
-            <div>
-              <div>
-              <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
-              <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
-              <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
-              </svg>
-              </div>
-            <div class="readypickup">
-              <h2>Ready for Pick Up</h2>
-              </div>
-              </div>
-              {{/if}}
         </div>
 
+        <!-- information -->
+        <div class="card card-information">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card card-border">
+                        <div class="card-body">
+                            <h5 class="card-title">Car Owner Information</h5>
+                            <p class="card-text">{{cars.0.user.username}}</p>
+                            <p class="card-text">{{cars.0.user.email}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card card-border">
+                        <div class="card-body">
+                            <h5 class="card-title">Estimate Pick Up Time</h5>
+                            <p class="card-text">Date/Time</p>
+                            <ul class="nav justify-content-end service-link">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- repair section-->
+    <div class="col-sm-4 repair">
+        <!-- repair detail -->
+        <div>
+            <h4>REPAIR DETAIL</h4>
+        </div>
+        <div></div>
+        <hr>
+
+        <div class="card" style="width: 18rem;">
+            {{!-- <div class="card-header">
+                Featured
+            </div> --}}
+            <ul class="list-group list-group-flush">
+                {{#each cars as |car|}}
+                <li class="list-group-item">{{item}}</li>
+                {{/each}}
+            </ul>
+        </div>
+
+        <br><br>
+        {{#if cars.schedule.complete_id}}
+        {{!-- Car Completed - checkmark --}}
+        <div>
+            <div>
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                    <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                    <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                </svg>
+            </div>
+            <div class="readypickup">
+                <h2>Ready for Pick Up</h2>
+            </div>
+        </div>
+        {{/if}}
+    </div>
+
+</div>
