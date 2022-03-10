@@ -52,10 +52,14 @@ https://damp-sea-74688.herokuapp.com/
 ## Installation
 
 To install this application: 
+
 $ git clone {address}
 $ cd ../path/to/the/file
 $ npm install
 $ npm start
+
+https://www.figma.com/file/xtTTkjbXDemiMTkIKfCKHT/Group4-project2-prototype-v1-final?node-id=0%3A1
+
 
 
 
