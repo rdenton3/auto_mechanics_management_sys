@@ -58,9 +58,10 @@ $ cd ../path/to/the/file
 $ npm install
 $ npm start
 
-https://www.figma.com/file/xtTTkjbXDemiMTkIKfCKHT/Group4-project2-prototype-v1-final?node-id=0%3A1
 
 
 
 
+
+<img width="1186" alt="ScreenShot" src="https://user-images.githubusercontent.com/37507020/157574072-df3b7def-0a2d-4ec1-8a49-a78e82032915.png">
 
