@@ -52,12 +52,11 @@ https://damp-sea-74688.herokuapp.com/
 ## Installation
 
 To install this application: 
-
 $ git clone {address}
 $ cd ../path/to/the/file
 $ npm install
 $ npm start
 
-!(..\public\images\ScreenShot.PNG)
+
 
 
