@@ -1,8 +1,7 @@
 # auto_mechanics_management_sys
 
 ## Table of Contents
-- [auto_mechanics_management_sys](#auto_mechanics_management_sys)
-  - [Table of Contents](#table-of-contents)
+
   - [User Story](#user-story)
   - [Technologies](#technologies)
   - [Acceptance Criteria](#acceptance-criteria)
