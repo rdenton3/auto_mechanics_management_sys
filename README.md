@@ -46,7 +46,7 @@ WHEN I am idle on the site for more than a set time
 THEN  I am prompted to log in again before I can add appointments
 
 ## Link to deployed Heroku application:
-https://damp-sea-74688.herokuapp.com/
+https://fast-n-furious.herokuapp.com/ 
 
 ## Installation
 
