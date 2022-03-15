@@ -3,47 +3,27 @@
 ## Table of Contents
 
   - [User Story](#user-story)
+  - [Description](#description)
+  - [Usage](#usage)
   - [Technologies](#technologies)
-  - [Acceptance Criteria](#acceptance-criteria)
   - [Link to deployed Heroku application:](#link-to-deployed-heroku-application)
   - [Installation](#installation)
+  - [Photos](#installation)
 
 ## User Story
 AS A Car Owner who wants to maintain the health of my car
 I WANT a CMS-style application site
-SO THAT I can be a aware of the status repairs, and appointments.
+SO THAT I can be a aware of my car status repairs and appointments.
+
+## Description
+Fast-n-Furious allows a user to make appointments with their mechanic and check on the status of repairs when their car is in the shop. User authentication is implemented to ensure that the user either signs up or logs in before accessing the Fast-n-Furious homepage. The navigation bar on the homepages features 3 functionalities: Make Appointment, View Appointment, and Status. The Make Appointment tab will allow the user to register their vehicle, select what repairs they need, and pick a date and time for the appointment. The View Appointment tab allows the user to see their existing appointments. The Status tab allows the user to see what work is ebing done to their car.
+
+## Usage 
+Please reference this video if you would like to see a walkthrough of how the application functions.
+https://drive.google.com/file/d/1F4KRttfRozSSL14Mk6PzBnO9HzjHjvQM/view 
 
 ## Technologies
-We used Node.js, Express.js, Handlebars, Bootstrap, Sequelize, Figma, Fullpage.js
-
-## Acceptance Criteria
-GIVEN a CMS-style application site
-WHEN I visit the site for the first time
-THEN I am presented with the homepage, which includes the navigation links for the homepage and the dashboard; and the option to log in or Signup
-WHEN I click on any links in the navigation
-THEN I am prompted to either sign up or sign in
-WHEN I choose to sign up
-THEN I am prompted to create a username and password
-WHEN I click on the sign-up button
-THEN my user credentials are saved and I am logged into the site
-WHEN I revisit the site at a later time and choose to sign in
-THEN I am prompted to enter my username and password
-WHEN I am signed in to the site
-THEN I see navigation links for the homepage, the status page, appointment page, and the option to log out
-WHEN I click on the Appointments option in the navigation
-THEN I am taken to the homepage and presented existing appointments that include the Date and Time, and Car, and Owner
-WHEN I click on an appointment
-THEN I am presented with a list appointment options and have the option to leave a comment
-WHEN I select all the options needed for the repair and click on the submit button while signed in
-THEN the repair items are moved to the Status Page 
-WHEN I click on the dashboard option in the navigation
-THEN I am taken to the dashboard and presented with any appointments and the option to add a new appointment
-WHEN I click on the button to add a new appointment
-THEN I am prompted to enter both a date and time and car for my appointment (maybe add repairs needed from user)
-WHEN I click on the logout option in the navigation
-THEN I am signed out of the site
-WHEN I am idle on the site for more than a set time
-THEN  I am prompted to log in again before I can add appointments
+We used Node.js, Express.js, Handlebars, MySQL, Sequelize,  Bootstrap, Figma, Fullpage.js
 
 ## Link to deployed Heroku application:
 https://fast-n-furious.herokuapp.com/ 
@@ -57,10 +37,9 @@ $ cd ../path/to/the/file
 $ npm install
 $ npm start
 
-
-
-
-
-
-<img width="1186" alt="ScreenShot" src="https://user-images.githubusercontent.com/37507020/157574072-df3b7def-0a2d-4ec1-8a49-a78e82032915.png">
+## Photos
+![Photo1](./public/images/img1.png)
+![Photo2](./public/images/img2.png)
+![Photo3](./public/images/img3.png)
+![Photo4](./public/images/img4.png)
 
